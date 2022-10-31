@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void go_menu(View view) {
-//        setContentView(R.layout.menu_pilihan);
+       setContentView(R.layout.menu_pilihan);
 //        Intent pindah = new Intent(nama_view_awal.this, pindahkemno.class);
-        Intent move = new Intent();
-        startActivity(move);
+//        Intent move = new Intent();
+//        startActivity(move);
 
     }
 }
