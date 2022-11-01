@@ -9,8 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        >
+        android:layout_centerVertical="true">
 
         <TextView
             android:id="@+id/selamatDatang"
@@ -19,29 +18,27 @@
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"
             android:text="Selamat Datang di"
-            android:textColor="@color/Judul"/>
+            android:textColor="@color/Judul" />
 
         <TextView
             android:id="@+id/kotaLinggau"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/selamatDatang"
-            android:text="Kota Lubuk Linggau"
-            android:gravity="center"
             android:fontFamily="@font/poppins_reguler"
-            android:textColor="@color/SubJudul"
-              />
+            android:gravity="center"
+            android:text="Kota Lubuk Linggau"
+            android:textColor="@color/SubJudul" />
 
         <TextView
             android:id="@+id/Ayo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/kotaLinggau"
-            android:text="Ayo Ngelong Ke LUBUKLINGGAU"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:textColor="@color/base"
-            />
+            android:text="Ayo Ngelong Ke LUBUKLINGGAU"
+            android:textColor="@color/base" />
 
         <Button
             android:id="@+id/button"
@@ -49,30 +46,31 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Ayo"
             android:layout_centerHorizontal="true"
-            android:text="Lanjakke"
             android:fontFamily="@font/poppins_medium"
             android:onClick="go_menu"
-            />
+            android:text="Lanjakke" />
 
         <TextView
             android:id="@+id/sponsor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/button"
-            android:text="Sponsored By"
             android:fontFamily="@font/poppins_medium"
             android:gravity="center"
-            android:textColor="@color/SubJudul"
-            />
+            android:text="Sponsored By"
+            android:textColor="@color/SubJudul" />
 
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/gambar"-->
-<!--            android:layout_below="@id/button"-->
-<!--            android:layout_centerHorizontal="true"-->
-<!--            android:src="drawable/logo_lubuklinggau.png"-->
-<!--            />-->
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="190dp"
+            android:layout_height="189dp"
+            android:layout_below="@id/button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="110dp"
+            android:src="@drawable/logo_lubuklinggau" />
     </RelativeLayout>
 
 </RelativeLayout>

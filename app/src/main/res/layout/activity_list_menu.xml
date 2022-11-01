@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/contohGambar"
+                    android:layout_width="match_parent"
+                    android:layout_height="276dp"
+                    app:srcCompat="@drawable/air_terjun_temam" />
+
+                <RelativeLayout
+                    android:id="@+id/section1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contohGambar"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/nama_tempat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:paddingTop="10dp"
+                        android:text="(Nama Tempat)"
+                        android:textColor="@color/SubJudul"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nama_tempat"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/poppins_reguler"
+                        android:text="Lubuklinggau, Sumatera Selatan"
+                        android:textColor="@color/base"
+                        android:textSize="12sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rating" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/rating"
+                            android:text="4.2" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:id="@+id/section2"
+                    android:layout_below="@id/section1"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/call"
+                                android:id="@+id/gambar1"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gambar1"
+                                android:layout_centerInParent="true"
+                                android:text="CALL"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/SubJudul"
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="70dp"
+                            android:layout_marginStart="70dp"
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/navigate"
+                                android:id="@+id/gambar2"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gambar2"
+                                android:layout_centerInParent="true"
+                                android:text="ROUTE"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/SubJudul"
+                                />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/share"
+                                android:id="@+id/gambar3"
+                                android:layout_centerHorizontal="true"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/gambar3"
+                                android:layout_centerInParent="true"
+                                android:text="SHARE"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textColor="@color/SubJudul"
+                                />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/section3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/lokasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi"
+                    android:textColor="@color/SubJudul"
+                    android:fontFamily="@font/poppins_medium"
+
+                />
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lokasi"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:text="(lokasi)" />
+
+                <TextView
+                    android:id="@+id/deskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/alamat"
+                    android:text="Deskripsi"
+                    android:textColor="@color/SubJudul"
+                    android:fontFamily="@font/poppins_medium"
+
+                    />
+                <TextView
+                    android:id="@+id/isi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/deskripsi"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:text="(deskripsi)"
+                    />
+
+                <TextView
+                    android:id="@+id/kontak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi"
+                    android:text="Kontak"
+                    android:textColor="@color/SubJudul"
+                    android:fontFamily="@font/poppins_medium"
+
+                    />
+
+                <TextView
+                    android:id="@+id/noHp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/kontak"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:text="(noHp)"
+                    />
+
+                <Button
+                    android:id="@+id/waterfang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noHp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="Home" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
