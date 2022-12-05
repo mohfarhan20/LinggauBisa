@@ -9,44 +9,60 @@ import android.widget.Button;
 
 public class MenuPilihan extends AppCompatActivity {
 
-    private Button buttonmasjid_agung, buttonAirterjun, buttonBukitSulap;
+    private Button buttonmasjid_agung, buttonAirterjun, buttonBukitSulap,buttonWaterfang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_menu_pilihan);
 
+        dataAirTerjun();
+        dataBukitSulap();
+        dataWaterfang();
+        dataMasjidAgung();
+
 
     }
-    public void pindahAirTerjun(View view) {
-        Intent pindah = new Intent(MenuPilihan.this, ListMenu.class);
-        startActivity(pindah);
-    }
+
 
     public void dataMasjidAgung() {
         buttonmasjid_agung = findViewById(R.id.masjid_agung);
         buttonmasjid_agung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//          Intent moveTransition = new Intent()
+          Intent pindahListMenu = new Intent(MenuPilihan.this,ListMenu.class);
                 String tempatWisata[] = {"Masjid Agung",
                         "Jl. Garuda, Ps. Permiri, Kec. Lubuk Linggau Bar. II, Kota Lubuklinggau, Sumatera Selatan 31613",
                         "Masjid Agung As-Salam begitu nama resminya. Masjid ini menjadi masjid agung kedua di Kota Lubuk Linggau. " +
                                 "Sebelumnya telah ada masjid agung lainnya yaitu Masjid Agung Al Baari' yang terletak tidak terlalu jauh " +
                                 "dari masjid Agung As-Salam.Masjid Agung As-Salam terletak di jantung Kota Lubuklinggau Provinsi " +
                                 "Sumatera Selatan. Masjid ini tak hanya sekadar menjadi tempat ibadah bagi umat Islam namun telah " +
-                                "menjadi salah satu objek wisata religi di provinsi Sumatra Selatan.", "081368692496", "4.9"};
+                                "menjadi salah satu objek wisata religi di provinsi Sumatra Selatan.",
+                                "081368692496",
+                                "4.9",
+                                "https://www.google.com/maps/place/Masjid+Agung+As-Salam+Lubuklinggau/@-3.2968828,102.8579762,17z/data=!3m1!4b1!4m5!3m4!1s0x2e30e0fd6c08b753:0xc7177f94b120330d!8m2!3d-3.2968882!4d102.8601649"};
+
+                int gambar = R.drawable.masjid_agung;
+                pindahListMenu.putExtra("nama_wisata",tempatWisata[0]);
+                pindahListMenu.putExtra("lokasi_wisata",tempatWisata[1]);
+                pindahListMenu.putExtra("deskripsi_wisata",tempatWisata[2]);
+                pindahListMenu.putExtra("noHp_wisata",tempatWisata[3]);
+                pindahListMenu.putExtra("rate_wisata",tempatWisata[4]);
+                pindahListMenu.putExtra("lokasi_maps",tempatWisata[5]);
+                pindahListMenu.putExtra("gambarTempat",gambar);
+                startActivity(pindahListMenu);
 
             }
         });
     }
 
     public void dataAirTerjun() {
-        buttonmasjid_agung = findViewById(R.id.air_terjun);
-        buttonmasjid_agung.setOnClickListener(new View.OnClickListener() {
+        buttonAirterjun = findViewById(R.id.air_terjun);
+        buttonAirterjun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//          Intent moveTransition = new Intent()
+                Intent pindahListMenu = new Intent(MenuPilihan.this,ListMenu.class);
                 String tempatWisata[] = {"Air Terjun Temam",
                         "Air Teman, Kec. Lubuk Linggau Sel. I, Kota Lubuklinggau, Sumatera Selatan 31600",
                         "Air terjun Temam sama seperti air terjun Niagara yang berada di perbatasan Kanada dan Amerika Serikat." +
@@ -58,18 +74,28 @@ public class MenuPilihan extends AppCompatActivity {
                                 "Air terjun Temam yang menyerupai air terjun Niagara ini berada di aliran sungai Temam. " +
                                 "Di atas air terjun terdapat jembatam gantung yang melintang sepanjang 100 meter. " +
                                 "Sehingga para pengunjung dapat melihat air terjun Temam dari atas jembatan, hanya dengan " +
-                                "jarak 50 meter.", "081368692496", "4.4"};
+                                "jarak 50 meter.", "081368692496", "4.4",
+                                "https://www.google.com/maps/place/Air+Terjun+Temam/@-3.2968828,102.8579762,17z/data=!4m5!3m4!1s0x2e30e65155555555:0x24b5109c6d325f46!8m2!3d-3.2936245!4d102.9300533"};
 
+                int gambar = R.drawable.air_terjun_temam;
+                pindahListMenu.putExtra("nama_wisata",tempatWisata[0]);
+                pindahListMenu.putExtra("lokasi_wisata",tempatWisata[1]);
+                pindahListMenu.putExtra("deskripsi_wisata",tempatWisata[2]);
+                pindahListMenu.putExtra("noHp_wisata",tempatWisata[3]);
+                pindahListMenu.putExtra("rate_wisata",tempatWisata[4]);
+                pindahListMenu.putExtra("lokasi_maps",tempatWisata[5]);
+                pindahListMenu.putExtra("gambarTempat",gambar);
+                startActivity(pindahListMenu);
             }
         });
     }
 
     public void dataBukitSulap() {
-        buttonmasjid_agung = findViewById(R.id.bukit_sulap);
-        buttonmasjid_agung.setOnClickListener(new View.OnClickListener() {
+        buttonBukitSulap = findViewById(R.id.bukit_sulap);
+        buttonBukitSulap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//          Intent moveTransition = new Intent()
+                Intent pindahListMenu = new Intent(MenuPilihan.this,ListMenu.class);
                 String tempatWisata[] = {"Bukit Sulap",
                         "Jl. Bengawan Solo No.RT 10, Ulak Surung, Kec. Lubuk Linggau Utara II, Kota Lubuklinggau, Sumatera Selatan 31617",
                         "Air terjun Temam sama seperti air terjun Niagara yang berada di perbatasan Kanada dan Amerika Serikat." +
@@ -83,18 +109,29 @@ public class MenuPilihan extends AppCompatActivity {
                                 "Untuk menuju puncak menggunakan jalur kereta miring, wisatawan cukup memarkirkan kendaraan di " +
                                 "shelter A, atau dapat juga melalui jalur sepeda dan berjalan kaki. Saat libur tiba seperti " +
                                 "long weekend Hari Buruh mendatang, Bukit Sulap akan ramai dikunjungi wisatawan dari Kota Lubuklinggau" +
-                                "maupun Bengkulu yang merupakan provinsi tetangga.", "-", "4.2"};
+                                "maupun Bengkulu yang merupakan provinsi tetangga.", "-", "4.2",
+                                "https://www.google.com/maps/search/bukit+sulap/@-3.2900223,102.8572275,16z/data=!3m1!4b1"};
+
+                int gambar = R.drawable.bukit_sulap;
+                pindahListMenu.putExtra("nama_wisata",tempatWisata[0]);
+                pindahListMenu.putExtra("lokasi_wisata",tempatWisata[1]);
+                pindahListMenu.putExtra("deskripsi_wisata",tempatWisata[2]);
+                pindahListMenu.putExtra("noHp_wisata",tempatWisata[3]);
+                pindahListMenu.putExtra("rate_wisata",tempatWisata[4]);
+                pindahListMenu.putExtra("lokasi_maps",tempatWisata[5]);
+                pindahListMenu.putExtra("gambarTempat",gambar);
+                startActivity(pindahListMenu);
 
             }
         });
     }
 
     public void dataWaterfang() {
-        buttonmasjid_agung = findViewById(R.id.waterfang);
-        buttonmasjid_agung.setOnClickListener(new View.OnClickListener() {
+        buttonWaterfang = findViewById(R.id.waterfang);
+        buttonWaterfang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//          Intent moveTransition = new Intent()
+                Intent pindahListMenu = new Intent(MenuPilihan.this,ListMenu.class);
                 String tempatWisata[] = {"Waterfang",
                         "Jalan Yos Sudarso, Batu Urip, Lubuk Linggau Utara II, Kota Lubuklinggau, Sumatera Selatan 31625",
                         "Watervang merupakan nama dari bendungan di Kota Lubuklinggau, Sumatera Selatan. " +
@@ -106,8 +143,18 @@ public class MenuPilihan extends AppCompatActivity {
                                 "Belanda mulai mencanangkan kebijakan yang diumumkan Ratu Wilhemina di depan parlemen saat itu, dalam upaya " +
                                 "membangun Hindia Belanda untuk memperbaiki kesejahteraan masyarakat pribumi. Prinsip sederhana dari pidato " +
                                 "Ratu Wilhemnia ini adalah Hindia Belanda harus dibangun. Sekaligus mengubah anggapan saat itu bahwa daerah " +
-                                "ini yang tidak lagi menguntungkan, harus dibangun agar berkembang.", "-", "4.2"};
+                                "ini yang tidak lagi menguntungkan, harus dibangun agar berkembang.", "-", "4.2",
+                                "https://www.google.com/maps/search/Watervang,+Kota+Lubuklinggau,+Sumatera+Selatan/@-3.2758817,102.8923571,16z"};
 
+               int gambar = R.drawable.watervang;
+                pindahListMenu.putExtra("nama_wisata",tempatWisata[0]);
+                pindahListMenu.putExtra("lokasi_wisata",tempatWisata[1]);
+                pindahListMenu.putExtra("deskripsi_wisata",tempatWisata[2]);
+                pindahListMenu.putExtra("noHp_wisata",tempatWisata[3]);
+                pindahListMenu.putExtra("rate_wisata",tempatWisata[4]);
+                pindahListMenu.putExtra("lokasi_maps",tempatWisata[5]);
+                pindahListMenu.putExtra("gambarTempat",gambar);
+                startActivity(pindahListMenu);
             }
         });
     }
