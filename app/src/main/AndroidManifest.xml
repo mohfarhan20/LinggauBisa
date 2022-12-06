@@ -15,12 +15,8 @@
         android:theme="@style/Theme.LinggauBisa"
         tools:targetApi="31" >
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBP6O5IlKm_RUb-myUy6riyj2vaZubZGQ0" />
-        <activity
-            android:name=".Maps"
-            android:exported="false" />
+
+
 
 
         <activity

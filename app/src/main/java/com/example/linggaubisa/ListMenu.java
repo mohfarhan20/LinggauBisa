@@ -101,21 +101,10 @@ public class ListMenu extends AppCompatActivity {
         });
     }
 
-//   private void makecall(View view){
-//        String phoneno = noHp_;
-//        Intent call = new Intent(Intent.ACTION_CALL);
-//        call.setData(Uri.parse("tel"+phoneno));
-//        startActivity(call);
-//    }
 
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
         startActivity(new Intent(Intent.ACTION_VIEW,uri));
-    }
-
-    public void go_maps(View maps) {
-        Intent home = new Intent(ListMenu.this,Maps.class);
-        startActivity(home);
     }
 
 

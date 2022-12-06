@@ -48,7 +48,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/poppins_medium"
             android:onClick="go_menu"
-            android:text="Lanjakke" />
+            android:text="Mulai" />
 
         <TextView
             android:id="@+id/sponsor"
